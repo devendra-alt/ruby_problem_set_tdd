@@ -115,5 +115,4 @@ I would like to thank Microverse and my peers.
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
