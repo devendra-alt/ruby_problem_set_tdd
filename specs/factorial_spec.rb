@@ -1,11 +1,23 @@
-require_relative 'Solver'
+require_relative '../solver'
 
-describe Solver do
+RSpec.describe Solver do
   context "Give corrent output for diffrent solver methods"
 
-  it "should give right factorial" do
+  it "should give factorial of 5 as 120" do
     solver = Solver.new
     expect(solver.factorial(5)).to be 120
+  end
+
+  it "should give factorial of 0 as 1" do
+    solver = Solver.new
+    expect(solver.factorial(0)).to be 1
+  end
+
+  it "should raise a error on -ve value" do
+    solver = Solver.new
+    expect {
+      solver.factorial(-1)
+    }.to raise_error(ArgumentError)
   end
 
 end
