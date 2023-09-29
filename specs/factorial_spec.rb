@@ -53,5 +53,15 @@ RSpec.describe Solver do
 
     end
   end
+<<<<<<< HEAD
 
+=======
+  
+  descibe '#reverse' do
+    it 'should reverse the string' do
+      solver = Solver.new
+      expect(solver.reverse('Hello')).to eq('olleH')
+    end
+  end
+>>>>>>> 737f80f590c6b491565d9236d16d0bffef3ee069
 end
