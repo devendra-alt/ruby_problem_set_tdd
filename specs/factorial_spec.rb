@@ -1,6 +1,6 @@
 require_relative '../solver'
 
-RSpec.describe Solver do
+RSpec.describe 'Factorial' do
   context 'Give corrent output for diffrent solver methods'
 
   it 'should give factorial of 5 as 120' do
@@ -19,49 +19,39 @@ RSpec.describe Solver do
       solver.factorial(-1)
     end.to raise_error(ArgumentError)
   end
- 
+end
 
-  
-  describe 'Fizzbuzz'
+
+
+RSpec.describe 'Fizzbuzz' do
   it 'should return Fizz when the number is divisible by 3' do
     solver =Solver.new
-    output = solver.Fizzbuzz(3)
-    expect(output).to eql('Fizz')
+    output = solver.fizzbuzz(3)
+    expect(output).to eql('fizz')
   end
 
-
-   
-    it 'should return Buzz when the number is divisible by 5' do
+  it 'should return Buzz when the number is divisible by 5' do
     solver =Solver.new
-    output = solver.Fizzbuzz(5)
-    expect(output).to eql('Buzz')
-
+    output = solver.fizzbuzz(5)
+    expect(output).to eql('buzz')
   end
 
- 
   it 'should return 3 when the number is divisible by 3 and 5' do
-  solver =Solver.new
-  output = solver.Fizzbuzz(15)
-  expect(output).to eql('FizzBuzz')
-
-
+    solver =Solver.new
+    output = solver.fizzbuzz(15)
+    expect(output).to eql('fizzbuzz')
+  end
 
   it 'should return the numer when the number is divisible by 9' do
-  solver =Solver.new
-  output = solver.Fizzbuzz(9)
-  expect(output).to eql('9')
-
-    end
+    solver =Solver.new
+    output = solver.fizzbuzz(9)
+    expect(output).to eql('9')
   end
-<<<<<<< HEAD
+end
 
-=======
-  
-  descibe '#reverse' do
+RSpec.describe '#reverse' do
     it 'should reverse the string' do
       solver = Solver.new
       expect(solver.reverse('Hello')).to eq('olleH')
     end
-  end
->>>>>>> 737f80f590c6b491565d9236d16d0bffef3ee069
 end
