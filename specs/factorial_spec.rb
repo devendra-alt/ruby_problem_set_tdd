@@ -19,32 +19,39 @@ RSpec.describe Solver do
       solver.factorial(-1)
     end.to raise_error(ArgumentError)
   end
+ 
 
+  
   describe 'Fizzbuzz'
   it 'should return Fizz when the number is divisible by 3' do
-    solver = Solver.new
-    solver.Fizzbuzz
-    expect(solver).to eql('Fizz')
+    solver =Solver.new
+    output = solver.Fizzbuzz(3)
+    expect(output).to eql('Fizz')
   end
 
-  describe 'Fizzbuzz'
-  it 'should return Buzz when the number is divisible by 5' do
-    solver = Solver.new
-    solver.Fizzbuzz
-    expect(solver).to eql('Buzz')
+
+   
+    it 'should return Buzz when the number is divisible by 5' do
+    solver =Solver.new
+    output = solver.Fizzbuzz(5)
+    expect(output).to eql('Buzz')
+
   end
 
-  describe 'Fizzbuzz'
+ 
   it 'should return 3 when the number is divisible by 3 and 5' do
-    solver = Solver.new
-    solver.Fizzbuzz
-    expect(solver).to eql('FizzBuzz')
+  solver =Solver.new
+  output = solver.Fizzbuzz(15)
+  expect(output).to eql('FizzBuzz')
+
+
+
+  it 'should return the numer when the number is divisible by 9' do
+  solver =Solver.new
+  output = solver.Fizzbuzz(9)
+  expect(output).to eql('9')
+
+    end
   end
 
-  describe 'Fizzbuzz'
-  it 'should return the numer when the number is divisible by 9' do
-    solver = Solver.new
-    solver.Fizzbuzz
-    expect(solver).to eql(9)
-  end
 end
