@@ -1,10 +1,9 @@
 class Solver
-  def factorial n
-    raise ArgumentError.new("negative value not allowed") if n < 0
-    if n == 0
-      return 1
-    else
-      return n * factorial(n-1)
-    end
+  def factorial(number)
+    raise ArgumentError, 'negative value not allowed' if n.negative?
+    return 1 if number.zero?
+
+
+    n * factorial(n - 1)
   end
 end
