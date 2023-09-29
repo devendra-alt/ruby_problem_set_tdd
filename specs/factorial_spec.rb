@@ -21,8 +21,6 @@ RSpec.describe 'Factorial' do
   end
 end
 
-
-
 RSpec.describe 'Fizzbuzz' do
   it 'should return Fizz when the number is divisible by 3' do
     solver = Solver.new
