@@ -47,4 +47,11 @@ RSpec.describe Solver do
     solver.Fizzbuzz
     expect(solver).to eql(9)
   end
+  
+  descibe '#reverse' do
+    it 'should reverse the string' do
+      solver = Solver.new
+      expect(solver.reverse('Hello')).to eq('olleH')
+    end
+  end
 end
